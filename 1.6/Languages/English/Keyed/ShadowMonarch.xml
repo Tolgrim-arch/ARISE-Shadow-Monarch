@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <ShadowMonarch_SettingsCategory>ARISE: Shadow Monarch</ShadowMonarch_SettingsCategory>
+  <ShadowMonarch_ExtractionChanceLabel>Extraction success chance: {0}</ShadowMonarch_ExtractionChanceLabel>
+  <ShadowMonarch_RecoveryHoursLabel>Shadow recovery duration (hours): {0}</ShadowMonarch_RecoveryHoursLabel>
+</LanguageData>
