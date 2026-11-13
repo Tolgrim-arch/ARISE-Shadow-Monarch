@@ -3,4 +3,7 @@
   <ShadowMonarch_SettingsCategory>ARISE: Shadow Monarch</ShadowMonarch_SettingsCategory>
   <ShadowMonarch_ExtractionChanceLabel>Extraction success chance: {0}</ShadowMonarch_ExtractionChanceLabel>
   <ShadowMonarch_RecoveryHoursLabel>Shadow recovery duration (hours): {0}</ShadowMonarch_RecoveryHoursLabel>
+  <ShadowMonarch_InvalidMonarchTarget>Target must be a living pawn.</ShadowMonarch_InvalidMonarchTarget>
+  <ShadowMonarch_MonarchMustBePlayerFaction>Monarch must belong to the player faction.</ShadowMonarch_MonarchMustBePlayerFaction>
+  <ShadowMonarch_MonarchDesignated>{0} has been designated as the Shadow Monarch.</ShadowMonarch_MonarchDesignated>
 </LanguageData>
