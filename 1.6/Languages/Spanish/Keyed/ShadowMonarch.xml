@@ -3,4 +3,7 @@
   <ShadowMonarch_SettingsCategory>ARISE: Shadow Monarch</ShadowMonarch_SettingsCategory>
   <ShadowMonarch_ExtractionChanceLabel>Probabilidad de éxito de extracción: {0}</ShadowMonarch_ExtractionChanceLabel>
   <ShadowMonarch_RecoveryHoursLabel>Duración de recuperación de sombra (horas): {0}</ShadowMonarch_RecoveryHoursLabel>
+  <ShadowMonarch_InvalidMonarchTarget>El objetivo debe ser un peón vivo.</ShadowMonarch_InvalidMonarchTarget>
+  <ShadowMonarch_MonarchMustBePlayerFaction>El Monarca debe pertenecer a la facción del jugador.</ShadowMonarch_MonarchMustBePlayerFaction>
+  <ShadowMonarch_MonarchDesignated>{0} ha sido designado como el Monarca de las Sombras.</ShadowMonarch_MonarchDesignated>
 </LanguageData>
