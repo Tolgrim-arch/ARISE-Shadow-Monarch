@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>ARISE: Shadow Monarch</name>
+  <author>TOLGRIM</author>
+  <packageId>tolgrim.ariseshadowmonarch</packageId>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <description>Extract shadows from defeated foes, store them in your shadow army, and summon them to fight at your side.</description>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>Ludeon.RimWorld</li>
+    <li>brrainz.harmony</li>
+  </loadAfter>
+</ModMetaData>
