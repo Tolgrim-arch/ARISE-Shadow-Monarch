@@ -87,6 +87,10 @@ public static class ShadowExtractionService
             corpse.Destroy(DestroyMode.Vanish);
         }
 
+        // Strip social relations and colony work so the shadow acts purely as a servant.
+        sourcePawn.relations?.ClearAllRelations();
+        sourcePawn.workSettings?.DisableAll();
+
         ShadowVisuals.PlayTransientEffect(corpsePos, corpseMap);
 
         var record = new ShadowRecord(registry.MonarchId, sourcePawn);

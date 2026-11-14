@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <FactionDef>
+    <defName>ShadowMonarch_ShadowFaction</defName>
+    <label>shadow army</label>
+    <description>Loyal shadow servants bound to the Shadow Monarch.</description>
+    <pawnSingular>shadow</pawnSingular>
+    <pawnsPlural>shadows</pawnsPlural>
+    <fixedName>Shadow Army</fixedName>
+    <isPlayer>false</isPlayer>
+    <hidden>true</hidden>
+    <humanlikeFaction>true</humanlikeFaction>
+    <canMakeRandomly>false</canMakeRandomly>
+    <autoFlee>false</autoFlee>
+    <canSiege>false</canSiege>
+    <canStageAttacks>false</canStageAttacks>
+    <permanentEnemy>false</permanentEnemy>
+    <naturalEnemy>false</naturalEnemy>
+    <techLevel>Ultra</techLevel>
+    <factionIconPath>World/WorldObjects/Expanding/Town</factionIconPath>
+  </FactionDef>
+</Defs>
