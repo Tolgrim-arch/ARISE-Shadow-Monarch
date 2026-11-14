@@ -4,6 +4,7 @@ using RimWorld;
 using ShadowMonarch.Core;
 using ShadowMonarch.Extraction;
 using ShadowMonarch.Shadows;
+using ShadowMonarch.UI;
 using UnityEngine;
 using Verse;
 
@@ -51,6 +52,14 @@ public static class PawnGizmos_Patch
                 var msgType = success ? MessageTypeDefOf.PositiveEvent : MessageTypeDefOf.RejectInput;
                 Messages.Message(message, corpse.Spawned ? corpse : __instance, msgType, false);
             }
+        };
+
+        yield return new Command_Action
+        {
+            defaultLabel = "ShadowMonarch_ArmyCommandLabel".Translate(),
+            defaultDesc = "ShadowMonarch_ArmyCommandDesc".Translate(registry.Records.Count),
+            icon = TexCommand.Draft,
+            action = () => Find.WindowStack.Add(new Dialog_ShadowArmy(__instance))
         };
     }
 }
