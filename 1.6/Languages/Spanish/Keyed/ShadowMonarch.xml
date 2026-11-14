@@ -40,4 +40,6 @@
   <ShadowMonarch_SummonSucceeded>{0} ha sido invocada.</ShadowMonarch_SummonSucceeded>
   <ShadowMonarch_ShadowNotSummoned>{0} no está invocada actualmente.</ShadowMonarch_ShadowNotSummoned>
   <ShadowMonarch_RecallSucceeded>{0} ha regresado al almacenamiento de sombras.</ShadowMonarch_RecallSucceeded>
+  <ShadowMonarch_ShadowDefeated>{0} fue derrotada en combate y está recuperándose ({1}h).</ShadowMonarch_ShadowDefeated>
+  <ShadowMonarch_ShadowRecovered>{0} se ha recuperado y está lista para ser invocada.</ShadowMonarch_ShadowRecovered>
 </LanguageData>

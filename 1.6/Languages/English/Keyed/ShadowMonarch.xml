@@ -40,4 +40,6 @@
   <ShadowMonarch_SummonSucceeded>{0} has been summoned.</ShadowMonarch_SummonSucceeded>
   <ShadowMonarch_ShadowNotSummoned>{0} is not currently summoned.</ShadowMonarch_ShadowNotSummoned>
   <ShadowMonarch_RecallSucceeded>{0} has been recalled to shadow storage.</ShadowMonarch_RecallSucceeded>
+  <ShadowMonarch_ShadowDefeated>{0} was defeated in combat and is recovering ({1}h).</ShadowMonarch_ShadowDefeated>
+  <ShadowMonarch_ShadowRecovered>{0} has recovered and is ready to be summoned.</ShadowMonarch_ShadowRecovered>
 </LanguageData>

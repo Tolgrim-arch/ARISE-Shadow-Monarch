@@ -30,6 +30,48 @@ public sealed class ShadowRegistryGameComponent : GameComponent
         return pawn != null && _monarchPawn == pawn && !pawn.Dead && !pawn.Destroyed;
     }
 
+    public bool IsShadow(Pawn? pawn)
+    {
+        return TryGetRecord(pawn, out _);
+    }
+
+    public bool TryGetRecord(Pawn? pawn, out ShadowRecord? record)
+    {
+        if (pawn != null)
+        {
+            for (var i = 0; i < _records.Count; i++)
+            {
+                if (_records[i].Pawn == pawn)
+                {
+                    record = _records[i];
+                    return true;
+                }
+            }
+        }
+
+        record = null;
+        return false;
+    }
+
+    public override void GameComponentTick()
+    {
+        base.GameComponentTick();
+        if (Find.TickManager.TicksGame % 250 != 0)
+        {
+            return;
+        }
+
+        var currentTick = Find.TickManager.TicksGame;
+        for (var i = 0; i < _records.Count; i++)
+        {
+            var record = _records[i];
+            if (record.State == ShadowState.Recovering && record.RecoveryCompleteTick >= 0 && currentTick >= record.RecoveryCompleteTick)
+            {
+                ShadowLifecycleService.CompleteRecovery(record);
+            }
+        }
+    }
+
     public bool DesignateMonarch(Pawn pawn, out string reason)
     {
         if (pawn == null || pawn.Dead || pawn.Destroyed)
