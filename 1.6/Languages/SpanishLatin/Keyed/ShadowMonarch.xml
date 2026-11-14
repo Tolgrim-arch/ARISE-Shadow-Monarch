@@ -2,8 +2,27 @@
 <LanguageData>
   <ShadowMonarch_SettingsCategory>ARISE: Shadow Monarch</ShadowMonarch_SettingsCategory>
   <ShadowMonarch_ExtractionChanceLabel>Probabilidad de éxito de extracción: {0}</ShadowMonarch_ExtractionChanceLabel>
+  <ShadowMonarch_MaxAttemptsLabel>Intentos máximos de extracción por cadáver: {0}</ShadowMonarch_MaxAttemptsLabel>
   <ShadowMonarch_RecoveryHoursLabel>Duración de recuperación de sombra (horas): {0}</ShadowMonarch_RecoveryHoursLabel>
+  <ShadowMonarch_DestroyCorpseOnSuccessLabel>Consumir cadáver al extraer con éxito</ShadowMonarch_DestroyCorpseOnSuccessLabel>
+  <ShadowMonarch_DestroyCorpseOnSuccessTooltip>Si está activado, el cadáver desaparece al extraer la sombra con éxito. Si está desactivado, permanece marcado como ya extraído.</ShadowMonarch_DestroyCorpseOnSuccessTooltip>
+  <ShadowMonarch_AllowAnimalExtractionLabel>Permitir extracción de sombras animales</ShadowMonarch_AllowAnimalExtractionLabel>
+  <ShadowMonarch_AllowAnimalExtractionTooltip>Permite extraer sombras de cadáveres animales además de humanoides.</ShadowMonarch_AllowAnimalExtractionTooltip>
+  <ShadowMonarch_EnableVisualEffectsLabel>Activar efectos visuales de sombra</ShadowMonarch_EnableVisualEffectsLabel>
+  <ShadowMonarch_EnableVisualEffectsTooltip>Activa el tinte oscuro y efectos breves de extracción e invocación.</ShadowMonarch_EnableVisualEffectsTooltip>
+  <ShadowMonarch_ResetDefaults>Restablecer valores por defecto</ShadowMonarch_ResetDefaults>
+
   <ShadowMonarch_InvalidMonarchTarget>El objetivo debe ser un peón vivo.</ShadowMonarch_InvalidMonarchTarget>
   <ShadowMonarch_MonarchMustBePlayerFaction>El Monarca debe pertenecer a la facción del jugador.</ShadowMonarch_MonarchMustBePlayerFaction>
   <ShadowMonarch_MonarchDesignated>{0} ha sido designado como el Monarca de las Sombras.</ShadowMonarch_MonarchDesignated>
+
+  <ShadowMonarch_AriseCommandLabel>Arise</ShadowMonarch_AriseCommandLabel>
+  <ShadowMonarch_AriseCommandDesc>Intenta extraer una sombra de un cadáver. Probabilidad: {0}, intentos máximos: {1}.</ShadowMonarch_AriseCommandDesc>
+  <ShadowMonarch_NotMonarch>Solo el Monarca de las Sombras designado puede usar Arise.</ShadowMonarch_NotMonarch>
+  <ShadowMonarch_InvalidCorpse>El objetivo no es un cadáver válido.</ShadowMonarch_InvalidCorpse>
+  <ShadowMonarch_AlreadyExtracted>Ya se ha extraído una sombra de este cadáver.</ShadowMonarch_AlreadyExtracted>
+  <ShadowMonarch_UnsupportedCreature>No se puede extraer sombra de una criatura no compatible: {0}.</ShadowMonarch_UnsupportedCreature>
+  <ShadowMonarch_NoAttemptsRemaining>No quedan intentos de extracción para este cadáver.</ShadowMonarch_NoAttemptsRemaining>
+  <ShadowMonarch_ExtractionFailed>Extracción fallida para {0} ({1} intentos restantes, probabilidad {2}).</ShadowMonarch_ExtractionFailed>
+  <ShadowMonarch_ExtractionSucceeded>¡Arise! {0} se ha unido a tu ejército de sombras.</ShadowMonarch_ExtractionSucceeded>
 </LanguageData>

@@ -2,8 +2,27 @@
 <LanguageData>
   <ShadowMonarch_SettingsCategory>ARISE: Shadow Monarch</ShadowMonarch_SettingsCategory>
   <ShadowMonarch_ExtractionChanceLabel>Extraction success chance: {0}</ShadowMonarch_ExtractionChanceLabel>
+  <ShadowMonarch_MaxAttemptsLabel>Max extraction attempts per corpse: {0}</ShadowMonarch_MaxAttemptsLabel>
   <ShadowMonarch_RecoveryHoursLabel>Shadow recovery duration (hours): {0}</ShadowMonarch_RecoveryHoursLabel>
+  <ShadowMonarch_DestroyCorpseOnSuccessLabel>Consume corpse on successful extraction</ShadowMonarch_DestroyCorpseOnSuccessLabel>
+  <ShadowMonarch_DestroyCorpseOnSuccessTooltip>If enabled, the corpse is vanished upon successful extraction. If disabled, it remains marked as extracted.</ShadowMonarch_DestroyCorpseOnSuccessTooltip>
+  <ShadowMonarch_AllowAnimalExtractionLabel>Allow animal shadow extraction</ShadowMonarch_AllowAnimalExtractionLabel>
+  <ShadowMonarch_AllowAnimalExtractionTooltip>Allows extracting shadows from animal corpses in addition to humanlikes.</ShadowMonarch_AllowAnimalExtractionTooltip>
+  <ShadowMonarch_EnableVisualEffectsLabel>Enable shadow visual effects</ShadowMonarch_EnableVisualEffectsLabel>
+  <ShadowMonarch_EnableVisualEffectsTooltip>Enables shadow tint and transient extraction/summon effects.</ShadowMonarch_EnableVisualEffectsTooltip>
+  <ShadowMonarch_ResetDefaults>Reset to defaults</ShadowMonarch_ResetDefaults>
+
   <ShadowMonarch_InvalidMonarchTarget>Target must be a living pawn.</ShadowMonarch_InvalidMonarchTarget>
   <ShadowMonarch_MonarchMustBePlayerFaction>Monarch must belong to the player faction.</ShadowMonarch_MonarchMustBePlayerFaction>
   <ShadowMonarch_MonarchDesignated>{0} has been designated as the Shadow Monarch.</ShadowMonarch_MonarchDesignated>
+
+  <ShadowMonarch_AriseCommandLabel>Arise</ShadowMonarch_AriseCommandLabel>
+  <ShadowMonarch_AriseCommandDesc>Attempt to extract a shadow from a corpse. Success chance: {0}, max attempts: {1}.</ShadowMonarch_AriseCommandDesc>
+  <ShadowMonarch_NotMonarch>Only the designated Shadow Monarch can use Arise.</ShadowMonarch_NotMonarch>
+  <ShadowMonarch_InvalidCorpse>Target is not a valid corpse.</ShadowMonarch_InvalidCorpse>
+  <ShadowMonarch_AlreadyExtracted>A shadow has already been extracted from this corpse.</ShadowMonarch_AlreadyExtracted>
+  <ShadowMonarch_UnsupportedCreature>Cannot extract shadow from unsupported creature: {0}.</ShadowMonarch_UnsupportedCreature>
+  <ShadowMonarch_NoAttemptsRemaining>No extraction attempts remaining for this corpse.</ShadowMonarch_NoAttemptsRemaining>
+  <ShadowMonarch_ExtractionFailed>Extraction failed for {0} ({1} attempts remaining, chance {2}).</ShadowMonarch_ExtractionFailed>
+  <ShadowMonarch_ExtractionSucceeded>Arise! {0} has been added to your shadow army.</ShadowMonarch_ExtractionSucceeded>
 </LanguageData>
