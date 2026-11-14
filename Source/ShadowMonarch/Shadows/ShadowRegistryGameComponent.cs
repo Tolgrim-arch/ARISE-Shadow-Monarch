@@ -13,6 +13,7 @@ public sealed class ShadowRegistryGameComponent : GameComponent
     private string _monarchId = string.Empty;
     private List<ShadowRecord> _records = new();
     private Dictionary<string, int> _corpseExtractionAttempts = new();
+    private HashSet<string> _extractedCorpses = new();
 
     public Pawn? MonarchPawn => _monarchPawn;
     public string MonarchId => _monarchId;
@@ -49,13 +50,27 @@ public sealed class ShadowRegistryGameComponent : GameComponent
         return true;
     }
 
-    public int GetRemainingAttempts(Corpse corpse, int maxAttempts = 3)
+    public bool IsCorpseExtracted(Corpse? corpse)
+    {
+        return corpse != null && _extractedCorpses.Contains(corpse.GetUniqueLoadID());
+    }
+
+    public void MarkCorpseExtracted(Corpse corpse)
+    {
+        if (corpse != null)
+        {
+            _extractedCorpses.Add(corpse.GetUniqueLoadID());
+        }
+    }
+
+    public int GetRemainingAttempts(Corpse corpse, int? maxAttemptsOverride = null)
     {
         if (corpse == null)
         {
             return 0;
         }
 
+        var maxAttempts = maxAttemptsOverride ?? ShadowMonarch.Core.ShadowMonarchMod.Settings.MaxExtractionAttempts;
         var key = corpse.GetUniqueLoadID();
         return _corpseExtractionAttempts.TryGetValue(key, out var used)
             ? System.Math.Max(0, maxAttempts - used)
@@ -102,11 +117,13 @@ public sealed class ShadowRegistryGameComponent : GameComponent
         Scribe_Values.Look(ref _monarchId, "monarchId", string.Empty);
         Scribe_Collections.Look(ref _records, "records", LookMode.Deep);
         Scribe_Collections.Look(ref _corpseExtractionAttempts, "corpseExtractionAttempts", LookMode.Value, LookMode.Value);
+        Scribe_Collections.Look(ref _extractedCorpses, "extractedCorpses", LookMode.Value);
 
         if (Scribe.mode == LoadSaveMode.PostLoadInit)
         {
             _records ??= new List<ShadowRecord>();
             _corpseExtractionAttempts ??= new Dictionary<string, int>();
+            _extractedCorpses ??= new HashSet<string>();
             ReconcileAfterLoad();
         }
     }
