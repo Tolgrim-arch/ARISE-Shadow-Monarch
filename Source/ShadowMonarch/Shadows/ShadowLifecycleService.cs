@@ -1,5 +1,6 @@
 using RimWorld;
 using ShadowMonarch.Core;
+using ShadowMonarch.Rendering;
 using Verse;
 using Verse.AI;
 
@@ -61,6 +62,7 @@ public static class ShadowLifecycleService
         }
 
         GenSpawn.Spawn(pawn, spawnCell, map, WipeMode.Vanish);
+        ShadowVisuals.PlayTransientEffect(spawnCell, map);
         record.State = ShadowState.Summoned;
 
         message = "ShadowMonarch_SummonSucceeded".Translate(record.OriginalName);
@@ -84,6 +86,7 @@ public static class ShadowLifecycleService
         var pawn = record.Pawn;
         if (pawn.Spawned)
         {
+            ShadowVisuals.PlayTransientEffect(pawn.Position, pawn.Map);
             pawn.DeSpawn(DestroyMode.Vanish);
         }
 

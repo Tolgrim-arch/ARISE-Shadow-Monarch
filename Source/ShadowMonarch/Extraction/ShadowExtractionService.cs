@@ -1,5 +1,6 @@
 using RimWorld;
 using ShadowMonarch.Core;
+using ShadowMonarch.Rendering;
 using ShadowMonarch.Shadows;
 using Verse;
 
@@ -75,6 +76,8 @@ public static class ShadowExtractionService
         }
 
         var sourcePawn = corpse.InnerPawn;
+        var corpsePos = corpse.Position;
+        var corpseMap = corpse.Map;
         registry.MarkCorpseExtracted(corpse);
 
         // Detach pawn from corpse without duplicating equipment or inventory.
@@ -83,6 +86,8 @@ public static class ShadowExtractionService
         {
             corpse.Destroy(DestroyMode.Vanish);
         }
+
+        ShadowVisuals.PlayTransientEffect(corpsePos, corpseMap);
 
         var record = new ShadowRecord(registry.MonarchId, sourcePawn);
         registry.AddRecord(record);
