@@ -25,4 +25,19 @@
   <ShadowMonarch_NoAttemptsRemaining>No quedan intentos de extracción para este cadáver.</ShadowMonarch_NoAttemptsRemaining>
   <ShadowMonarch_ExtractionFailed>Extracción fallida para {0} ({1} intentos restantes, probabilidad {2}).</ShadowMonarch_ExtractionFailed>
   <ShadowMonarch_ExtractionSucceeded>¡Arise! {0} se ha unido a tu ejército de sombras.</ShadowMonarch_ExtractionSucceeded>
+
+  <ShadowMonarch_ArmyCommandLabel>Ejército de Sombras</ShadowMonarch_ArmyCommandLabel>
+  <ShadowMonarch_ArmyCommandDesc>Gestiona e invoca tus sombras almacenadas ({0} en total).</ShadowMonarch_ArmyCommandDesc>
+  <ShadowMonarch_ArmyWindowTitle>Ejército de Sombras</ShadowMonarch_ArmyWindowTitle>
+  <ShadowMonarch_NoShadowsStored>Aún no hay sombras almacenadas. Usa Arise sobre un cadáver válido.</ShadowMonarch_NoShadowsStored>
+  <ShadowMonarch_SummonButton>Invocar</ShadowMonarch_SummonButton>
+  <ShadowMonarch_RecallButton>Retirar</ShadowMonarch_RecallButton>
+  <ShadowMonarch_InvalidShadowRecord>Registro de sombra inválido o peón faltante.</ShadowMonarch_InvalidShadowRecord>
+  <ShadowMonarch_ShadowNotStored>{0} no está almacenada (estado actual: {1}).</ShadowMonarch_ShadowNotStored>
+  <ShadowMonarch_MonarchNotOnMap>El Monarca debe estar en un mapa activo para invocar sombras.</ShadowMonarch_MonarchNotOnMap>
+  <ShadowMonarch_AlreadySummoned>{0} ya está invocada.</ShadowMonarch_AlreadySummoned>
+  <ShadowMonarch_NoValidSummonCell>No hay una celda válida y alcanzable cerca del Monarca.</ShadowMonarch_NoValidSummonCell>
+  <ShadowMonarch_SummonSucceeded>{0} ha sido invocada.</ShadowMonarch_SummonSucceeded>
+  <ShadowMonarch_ShadowNotSummoned>{0} no está invocada actualmente.</ShadowMonarch_ShadowNotSummoned>
+  <ShadowMonarch_RecallSucceeded>{0} ha regresado al almacenamiento de sombras.</ShadowMonarch_RecallSucceeded>
 </LanguageData>

@@ -25,4 +25,19 @@
   <ShadowMonarch_NoAttemptsRemaining>No extraction attempts remaining for this corpse.</ShadowMonarch_NoAttemptsRemaining>
   <ShadowMonarch_ExtractionFailed>Extraction failed for {0} ({1} attempts remaining, chance {2}).</ShadowMonarch_ExtractionFailed>
   <ShadowMonarch_ExtractionSucceeded>Arise! {0} has been added to your shadow army.</ShadowMonarch_ExtractionSucceeded>
+
+  <ShadowMonarch_ArmyCommandLabel>Shadow Army</ShadowMonarch_ArmyCommandLabel>
+  <ShadowMonarch_ArmyCommandDesc>Manage and summon your stored shadows ({0} total).</ShadowMonarch_ArmyCommandDesc>
+  <ShadowMonarch_ArmyWindowTitle>Shadow Army</ShadowMonarch_ArmyWindowTitle>
+  <ShadowMonarch_NoShadowsStored>No shadows stored yet. Use Arise on a valid corpse.</ShadowMonarch_NoShadowsStored>
+  <ShadowMonarch_SummonButton>Summon</ShadowMonarch_SummonButton>
+  <ShadowMonarch_RecallButton>Recall</ShadowMonarch_RecallButton>
+  <ShadowMonarch_InvalidShadowRecord>Invalid shadow record or missing pawn.</ShadowMonarch_InvalidShadowRecord>
+  <ShadowMonarch_ShadowNotStored>{0} is not stored (current state: {1}).</ShadowMonarch_ShadowNotStored>
+  <ShadowMonarch_MonarchNotOnMap>Monarch must be on an active map to summon shadows.</ShadowMonarch_MonarchNotOnMap>
+  <ShadowMonarch_AlreadySummoned>{0} is already summoned.</ShadowMonarch_AlreadySummoned>
+  <ShadowMonarch_NoValidSummonCell>No valid reachable cell near the Monarch to summon.</ShadowMonarch_NoValidSummonCell>
+  <ShadowMonarch_SummonSucceeded>{0} has been summoned.</ShadowMonarch_SummonSucceeded>
+  <ShadowMonarch_ShadowNotSummoned>{0} is not currently summoned.</ShadowMonarch_ShadowNotSummoned>
+  <ShadowMonarch_RecallSucceeded>{0} has been recalled to shadow storage.</ShadowMonarch_RecallSucceeded>
 </LanguageData>
