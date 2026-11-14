@@ -6,13 +6,19 @@ using Verse.AI;
 
 namespace ShadowMonarch.Patches;
 
-[HarmonyPatch(typeof(Need), nameof(Need.NeedInterval))]
-public static class ShadowNeedInterval_Patch
+[HarmonyPatch(typeof(Need), "IsFrozen", MethodType.Getter)]
+public static class ShadowNeedFrozen_Patch
 {
-    public static bool Prefix(Pawn ___pawn)
+    public static bool Prefix(Pawn ___pawn, ref bool __result)
     {
         var registry = ShadowRegistryGameComponent.Current;
-        return registry == null || !registry.IsShadow(___pawn);
+        if (registry != null && registry.IsShadow(___pawn))
+        {
+            __result = true;
+            return false;
+        }
+
+        return true;
     }
 }
 
