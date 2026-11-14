@@ -56,9 +56,10 @@ public static class ShadowLifecycleService
             ResurrectionUtility.TryResurrect(pawn);
         }
 
-        if (pawn.Faction != Faction.OfPlayer)
+        var shadowFaction = GetOrCreateShadowFaction();
+        if (shadowFaction != null && pawn.Faction != shadowFaction)
         {
-            pawn.SetFaction(Faction.OfPlayer);
+            pawn.SetFaction(shadowFaction);
         }
 
         GenSpawn.Spawn(pawn, spawnCell, map, WipeMode.Vanish);
@@ -144,5 +145,28 @@ public static class ShadowLifecycleService
             "ShadowMonarch_ShadowRecovered".Translate(record.OriginalName),
             MessageTypeDefOf.PositiveEvent,
             false);
+    }
+
+    private static Faction? GetOrCreateShadowFaction()
+    {
+        var factionDef = DefDatabase<FactionDef>.GetNamedSilentFail("ShadowMonarch_ShadowFaction");
+        if (factionDef == null)
+        {
+            return Faction.OfPlayer;
+        }
+
+        var faction = Find.FactionManager.FirstFactionOfDef(factionDef);
+        if (faction == null)
+        {
+            faction = FactionGenerator.NewGeneratedFaction(new FactionGeneratorParms(factionDef));
+            Find.FactionManager.Add(faction);
+        }
+
+        if (Faction.OfPlayer != null && faction.RelationKindWith(Faction.OfPlayer) != FactionRelationKind.Ally)
+        {
+            faction.TryAffectGoodwillWith(Faction.OfPlayer, 200, canSendMessage: false, canSendHostilityLetter: false);
+        }
+
+        return faction;
     }
 }
